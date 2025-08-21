@@ -380,3 +380,15 @@ span.text-\[\#19a4e0\]
 .my-links-work span {
     margin-top: -4px;
 }
+h1.main-heading {
+      text-align: end;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.logo-head {
+    padding: 28px 7px 28px 0;
+}
+.main-page-para {
+    line-height: 22px;
+}

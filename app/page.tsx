@@ -174,7 +174,7 @@ export default function TempCoverValidation() {
         </div>
         <div className="w-full">
           <div className="max-w-4xl lg:px-0 md:px-0 px-4 mx-auto ">
-            <div className="flex  md:gap-2 gap-3 justify-between flex-col lg:flex-row md:flex-row lg:py-7 md:py-5 py-4 ">
+            <div className="flex  md:gap-2 gap-3 justify-between flex-col lg:flex-row md:flex-row logo-head md:py-5 py-4 ">
               <div className="flex lg:ml-2 lg:items-center md:items-center">
                 <Image
                   src={"/logo1.png"}
@@ -186,12 +186,12 @@ export default function TempCoverValidation() {
               </div>
               <div className="flex  flex-col lg:mt-[2px]  text-left lg:text-center md:text-right">
                 <div>
-                  <h1 className="lg:text-3xl lg:ml-[3rem] md:text-2xl text-2xl  font-bold text-[#234397] lg:mb-0 md:mb-0 mb-3">
+                  <h1 className="md:text-2xl text-2xl  font-bold text-[#234397] lg:mb-0 md:mb-0 mb-3 main-heading">
                     SHORT TERM INSURANCE
                   </h1>
                 </div>
                 <div className="-ml-2">
-                  <p className=" text-[#234397] -mt-[2px] text-[14px]">
+                  <p className=" text-[#234397] -mt-[2px] text-[14px] main-page-para">
                     We are the UK's largest temporary and short term insurance
                     provider.
                   </p>
