@@ -94,7 +94,7 @@ export default function TempCoverValidation() {
     }
   };
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       {/* Header */}
       <header>
         <div className="w-full lg:block md:block hidden bg-[#F2F2F2]  pb-[2px]">
