@@ -370,3 +370,13 @@ body {
   text-transform: uppercase;
   white-space: normal;
 }
+span.text-\[\#19a4e0\]
+ {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+.my-links-work span {
+    margin-top: -4px;
+}
