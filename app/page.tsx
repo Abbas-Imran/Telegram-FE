@@ -225,7 +225,7 @@ export default function TempCoverValidation() {
           <div className="w-full max-w-[1000px]">
             <div className="flex lg:flex-row md:flex-row flex-col  lg:gap-20 md:gap-9 gap-4">
               {/* Left column - Form */}
-              <div className="lg:ml-[1.4rem] space-y-[0.9rem] lg:order-1 md:order-1 order-2 lg:w-[55%]">
+              <div className="lg:ml-[1.4rem] space-y-[0.9rem] lg:order-1 md:order-1 order-2 lg:w-[55%] login-form-box">
                 <div className="flex flex-col  lg:flex-row lg:gap-3 md:gap-3">
                   <div className="lg:w-[41%]  flex    lg:justify-end  ">
                     <Label
@@ -444,7 +444,7 @@ export default function TempCoverValidation() {
                 )}
 
                 {/* reCAPTCHA */}
-                <div className="flex ">
+                <div className="flex recaptch">
                   <div className="lg:w-[40%]"></div>
                   <div className="lg:w-[60%] flex items-center space-x-3 bg-gray-100 p-4 border">
                     <input type="checkbox" className="w-6 h-6" />
@@ -457,7 +457,7 @@ export default function TempCoverValidation() {
                     </div>
                   </div>
                 </div>
-                <div className="flex">
+                <div className="flex submit-button">
                   <div className="lg:w-[40%] hidden"></div>
                   <div className="lg:w-[60%] flex lg:justify-end">
                     <button
@@ -472,13 +472,13 @@ export default function TempCoverValidation() {
                 </div>
               </div>
 
-              <div className="lg:order-2 lg:mx-4 md:order-2 lg:w-[40%] order-1">
+              <div className="lg:order-2 lg:mx-4 md:order-2 lg:w-[40%] order-1 second-col">
                 <div className="">
-                  <div className="border bg-[#F2F2F2] flex gap-2 border-[#333] py-2 px-4">
+                  <div className="border bg-[#F2F2F2] flex gap-1 border-[#333] py-2 px-4">
                     <div className="text-[#333]">Your reference:</div>
                     <div className="font-bold">TCV-MOT-44072540</div>
                   </div>
-                  <div className="border bg-[#F2F2F2] flex gap-2 border-[#333] py-2 px-4">
+                  <div className="border bg-[#F2F2F2] flex gap-1 border-[#333] py-2 px-4">
                     <div className=" text-[#333]  font-bold">Policy:</div>
                     <div className="font-bold text-[#333]">
                       Fully comprehensive cover
