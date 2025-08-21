@@ -462,7 +462,7 @@ export default function TempCoverValidation() {
                   <div className="lg:w-[60%] flex lg:justify-end">
                     <button
                       onClick={handleLogin}
-                      className="bg-[#6BA125] !py-[6px] !px-[12px] btn text-white cursor-pointer"
+                      className="bg-[#6BA125] !py-[6px] !px-[12px] btn text-white cursor-pointer leading-[18px]"
                     >
                       SUBMIT
                     </button>
