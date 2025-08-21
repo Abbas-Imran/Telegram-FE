@@ -99,7 +99,7 @@ export default function TempCoverValidation() {
       <header>
         <div className="w-full lg:block md:block hidden bg-[#F2F2F2]  pb-[2px]">
           <div className="max-w-4xl  mx-auto ">
-            <div className="pt-[1px]  flex  justify-end mr-[17px] items-center  text-sm">
+            <div className="pt-[1px]  flex  justify-end mr-[16.5px] items-center  text-sm">
               <div className="flex items-center space-x-4 ">
                 <div className="my-links-work flex items-center space-x-4 mr-[15px] mt-[-2px]">
                   <Link
@@ -111,7 +111,7 @@ export default function TempCoverValidation() {
                   <span className="text-[#19a4e0]">|</span>
                   <Link
                     href="#"
-                    className="text-[#234397] text-[12px] hover:underline"
+                    className="text-[#234397] text-[12px] hover:underline mr-[0px]"
                   >
                     Why choose Tempcover?
                   </Link>
@@ -175,15 +175,8 @@ export default function TempCoverValidation() {
         <div className="w-full">
           <div className="max-w-4xl lg:px-0 md:px-0 px-4 mx-auto ">
             <div className="flex  md:gap-2 gap-3 justify-between flex-col lg:flex-row md:flex-row logo-head md:py-5 py-4 ">
-              <div className="flex lg:ml-2 lg:items-center md:items-center">
-                <Image
-                  src={"/logo1.png"}
-                  width={300}
-                  height={60}
-                  alt=""
-                  className="lg:w-[330px] md:w-[330px] md:h-[57px] w-[192px] h-[37px] mt-2 lg:h-[57px]"
-                ></Image>
-              </div>
+              
+              <div className="brand-logo"></div>
               <div className="flex  flex-col lg:mt-[2px]  text-left lg:text-center md:text-right">
                 <div>
                   <h1 className="md:text-2xl text-2xl  font-bold text-[#234397] lg:mb-0 md:mb-0 mb-3 main-heading">
