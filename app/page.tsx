@@ -202,7 +202,7 @@ export default function TempCoverValidation() {
         </div>
       </header>
       {/* Main content */}
-      <main className=" max-w-[1040px] lg:pl-[14px] md:px-0 px-2 mx-auto lg:py-14 md:py-10 py-9">
+      <main className=" max-w-[1040px] lg:pl-[14px] md:px-0 px-2 mx-auto lg:py-14 md:py-10 py-9 main-box">
         <div className="lg:ml-12 flex flex-col pl-2 mb-4">
           <h2 className="text-[35px]   font-bold text-[#000] mb-2">
             USER VALIDATION
@@ -236,7 +236,7 @@ export default function TempCoverValidation() {
                           : surname != ""
                           ? "text-[#6BA125]"
                           : "text-[#234397]"
-                      } font-bold text-[1rem] `}
+                      } font-bold text-[16px] `}
                     >
                       Policyholder surname
                     </Label>
@@ -287,7 +287,7 @@ export default function TempCoverValidation() {
                   <div className="flex lg:w-[41%] -mt-2  lg:justify-end  ">
                     <Label
                       htmlFor="dob"
-                      className={`font-bold text-[1rem] ${
+                      className={`font-bold text-[16px] ${
                         isDOBError
                           ? "text-[#E92A1B]" // Error state: red
                           : selectedDateOfBirth != null
@@ -372,7 +372,7 @@ export default function TempCoverValidation() {
                           : selectedDateOfPolicy
                           ? "text-[#6BA125]"
                           : "text-[#234397]"
-                      } font-bold text-[1rem]`}
+                      } font-bold text-[16px]`}
                     >
                       Policy start date
                     </Label>

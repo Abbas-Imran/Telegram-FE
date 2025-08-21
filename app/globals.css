@@ -392,3 +392,8 @@ h1.main-heading {
 .main-page-para {
     line-height: 22px;
 }
+
+.main-box{
+    padding-top: 56px;
+    padding-left: 18px;
+}
