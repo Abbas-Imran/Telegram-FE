@@ -467,11 +467,11 @@ export default function TempCoverValidation() {
 
               <div className="lg:order-2 lg:mx-4 md:order-2 lg:w-[40%] order-1 second-col">
                 <div className="">
-                  <div className="border bg-[#F2F2F2] flex gap-1 border-[#333] py-2 px-4">
+                  <div className="border bg-[#F2F2F2] flex gap-1 border-[#333] py-2 px-3">
                     <div className="text-[#333]">Your reference:</div>
                     <div className="font-bold">TCV-MOT-44072540</div>
                   </div>
-                  <div className="border bg-[#F2F2F2] flex gap-1 border-[#333] py-2 px-4">
+                  <div className="border bg-[#F2F2F2] flex gap-1 border-[#333] py-2 px-3">
                     <div className=" text-[#333]  font-bold">Policy:</div>
                     <div className="font-bold text-[#333]">
                       Fully comprehensive cover
