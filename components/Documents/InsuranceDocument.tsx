@@ -10,9 +10,8 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     borderWidth: 1,
     borderColor: '#000',
-
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 15,
+    paddingRight: 40,
     fontFamily: "Helvetica", // Default font, widely supported
     fontSize: 8,
     paddingTop: '5',
