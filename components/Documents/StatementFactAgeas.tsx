@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#000',
 
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 30,
+    paddingRight: 40,
     fontFamily: "Helvetica", // Default font, widely supported
     fontSize: 9,
     paddingTop: '5',
@@ -35,11 +35,12 @@ const styles = StyleSheet.create({
 
   },
   ageasLogo: {
-    width: 130,
+    width: 120,
     height: 100,
     position: "absolute",
     top: 0,
     right: 0,
+    marginRight: 30,
   },
   Logo1: {
     width: 180,
@@ -101,8 +102,7 @@ const styles = StyleSheet.create({
     borderColor: "#000",
   },
   mainCertificateSection1: {
-
-
+       marginTop: '110',
     paddingBottom: '5',
     borderColor: "#000",
     paddingRight: '30'
@@ -404,7 +404,7 @@ const styles = StyleSheet.create({
   {
     textAlign: 'center',
     marginTop: '250',
-    fontSize: '7'
+    fontSize: '5'
 
   },
   secondPageFirstContent:
@@ -442,8 +442,15 @@ const styles = StyleSheet.create({
   heading:
   {
     fontWeight: 'bold',
-    fontSize: '16',
+    fontSize: '14',
     marginBottom: '20'
+  },
+  firstheading:
+  {
+    fontWeight: 'bold',
+    fontSize: '14',
+    marginBottom: '18',
+    marginTop: '125',
   },
   heading1:
   {
@@ -505,9 +512,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+
   textSm:
   {
-    fontSize: '8'
+    fontSize: '7'
+  },
+  lastwork:
+  {
+    marginTop: '10',    
+    marginBottom: '30',    
   }
 
 })
@@ -518,10 +531,10 @@ const StatementFactAgeas = () => (
     <Page size="A4" style={styles.page}>
       {/* */}
       <View style={styles.logo}>
-        <Image src="/logo.png" style={styles.ageasLogo} width={140} height={70} alt="Ageas Logo" />
+        <Image src="/logo.png" style={styles.ageasLogo} width={120} height={100} alt="Ageas Logo" />
 
       </View>
-      <View style={styles.heading}>
+      <View style={styles.firstheading}>
         <Text >STATEMENT OF FACT - Short Term Insurance</Text>
       </View>
 
@@ -732,16 +745,20 @@ const StatementFactAgeas = () => (
 
 
       </View>
-      <View style={styles.firstpagefooter}>
-        <Image src="/tempcover.png" style={styles.Logo1} width={90} height={30} alt="Ageas Logo" />
+      <View style={styles.lastwork}>
+        <View style={styles.firstpagefooter}>
+          <Image src="/tempcover.png" style={styles.Logo1} width={90} height={30} alt="Ageas Logo" />
 
-      </View>
-      <View style={styles.lastHeading}>
-        <Text >Ageas Insurance Limited, Ageas House, Hampshire Corporate Park, Templers Way, Eastleigh, Hampshire, SO53 3YA</Text>
+        </View>
+        <View style={styles.lastHeading}>
+          <Text >Ageas Insurance Limited, Ageas House, Hampshire Corporate Park, Templers Way, Eastleigh, Hampshire, SO53 3YA</Text>
 
+        </View>
       </View>
-      <View style={styles.logo}>
-        <Image src="/logo.png" style={styles.ageasLogo} width={140} height={100} alt="Ageas Logo" />
+</Page>
+ <Page size="A4" style={styles.page}>
+      <View style={styles.logo} style={{ position: "relative" }}>
+        <Image src="/logo.png" style={styles.ageasLogo} width={120} height={100} alt="Ageas Logo" />
 
       </View>
       <View style={styles.mainCertificateSection1}>
@@ -857,8 +874,11 @@ const StatementFactAgeas = () => (
 
         </View>
       </View>
+
+    </Page>
+     <Page size="A4" style={styles.page}>
       <View style={styles.logo}>
-        <Image src="/logo.png" style={styles.ageasLogo} width={140} height={100} alt="Ageas Logo" />
+        <Image src="/logo.png" style={styles.ageasLogo}  alt="Ageas Logo" />
 
       </View>
       <View style={styles.mainCertificateSection1}>
