@@ -1,190 +1,118 @@
-"use client"
+"use client";
 
-import { Document, Page, Text, View, StyleSheet, Image } from "@react-pdf/renderer"
-
-// You can register custom fonts if needed, for example:
-// Font.register({ family: 'Roboto', src: '/fonts/Roboto-Regular.ttf' });
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  StyleSheet,
+  Image,
+} from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 20,
-    fontFamily: "Helvetica", // Default font, widely supported
+    padding: 20,
+    fontFamily: "Helvetica",
     fontSize: 10,
-    lineHeight: 1.4,
-    position: "relative", // For absolute positioning of elements if needed
+    lineHeight: 1.1,
   },
   header: {
-
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-start",
+    marginBottom: 10,
   },
   addressBlock: {
     borderWidth: 1,
     borderColor: "#000",
+    padding: 8,
+    width: "55%",
     fontWeight: "bold",
-    padding: 10,
-    width: "60%", // Adjust width as needed
-    marginBottom: 20,
   },
-  ageasLogo: {
-    width: 130,
+  logo: {
+    width: 120,
     height: 100,
-    position: "absolute",
-    top: 0,
-    right: 0,
   },
-  certification: {
-    borderLeft: 1,
-    borderRight: 1,
-    borderTop: 0.5,
-    borderBottom: 1,
-    borderColor: "#000",
-    padding: 10,
-    textAlign: "justify",
-
-  },
-  companyDetails: {
-    borderWidth: 1,
-    borderColor: "#000",
-    padding: 10,
-    textAlign: "left",
-    marginBottom: 20,
-  },
-  companyName: {
-    fontWeight: "bold",
-    fontSize: 12,
-    marginBottom: 5,
-  },
-  ceo: {
-    marginTop: 10,
-  },
-  instruction: {
-    borderWidth: 1,
-    borderColor: "#000",
-    padding: 10,
-    marginBottom: 30,
-    textAlign: "left",
+  note: {
+    textAlign: "center",
+    fontSize: 9,
+    marginVertical: 5,
   },
   dottedLine: {
     borderBottomWidth: 1,
     borderBottomColor: "#000",
     borderBottomStyle: "dotted",
-    marginBottom: 10,
+    marginVertical: 5,
   },
-  certificateTitle: {
-    fontSize: 22,
+  title: {
+    fontSize: 14,
     fontWeight: "bold",
     textAlign: "center",
-    marginBottom: 20,
+    marginVertical: 8,
   },
-  mainCertificateSection: {
-    borderTop: 1,
-    borderLeft: 1,
-    borderRight: 1,
+  mainBox: {
+    borderWidth: 1,
     borderColor: "#000",
-    padding: 10,
-
+    padding: 8,
+    marginBottom: 0,
   },
-  listItem: {
+  row: {
     flexDirection: "row",
-    alignItems: "flex-start",
+    marginBottom: 5,
   },
-  listItemNumber: {
-    width: 10,
-    marginRight: 5,
+  number: {
+    width: 15,
   },
-  listItemContent: {
+  content: {
     flex: 1,
   },
-  subListItem: {
-    marginLeft: 20,
+  twoColRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   bold: {
     fontWeight: "bold",
   },
-  noteWarning: {
-    marginTop: 10,
-    marginBottom: 5,
+  italic: {
+    fontStyle: "italic",
   },
-  footer: {
-    marginTop: "auto", // Pushes footer to the bottom of the page
-    borderTopWidth: 1,
-    borderTopColor: "#eee",
-    paddingTop: 10,
+  certification: {
+    borderWidth: 1,
+    borderColor: "#000",
+    padding: 8,
+    marginBottom: 0,
+  },
+  certRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-end",
-    width: "100%",
-  },
-  footerLeft: {
-    textAlign: "left",
-    fontSize: 8,
-    flex: 1,
-  },
-  footerRight: {
-    textAlign: "right",
-    fontSize: 8,
-    width: 80, // Fixed width for alignment
-  },
-  claimsHotline: {
     marginTop: 10,
-    fontSize: 10,
-    fontWeight: "bold",
   },
-  signatureSection: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  signatureBlock: {
     alignItems: "flex-end",
-    marginTop: 10,
+  },
+  noteBox: {
+    borderWidth: 1,
+    borderColor: "#000",
+    padding: 8,
     marginBottom: 10,
   },
-  signatureImage: {
-    width: 150,
-    height: 50,
-  },
-  signatureText: {
-    textAlign: "right",
-    fontSize: 9,
-  },
-  TCV: {
-    width: 150,
-    marginLeft: 20,
-    fontWeight: 'bold'
-  },
-  LF:
-  {
-    marginLeft: 80
-  },
-  marginTop:
-  {
-    marginTop: 10
-  },
-  marginTop2:
-  {
-    marginTop: 5
-  },
-  office:
-  {
+  footer: {
     textAlign: "center",
-    marginTop: 10
-
-  },
-  heading:
-  {
-    fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 8,
     marginTop: 5,
-    textAlign: 'center'
-  }
-})
+  },
+  hotline: {
+    textAlign: "center",
+    fontSize: 12,
+    fontWeight: "bold",
+    marginTop: 5,
+  },
+});
 
 const MotorInsuranceCertificate = () => (
   <Document>
     <Page size="A4" style={styles.page}>
+      {/* header */}
       <View style={styles.header}>
         <View style={styles.addressBlock}>
           <Text>Uzzal Miah</Text>
@@ -192,210 +120,163 @@ const MotorInsuranceCertificate = () => (
           <Text>Dagenham, Greater London</Text>
           <Text>RM8 2RP</Text>
         </View>
-
-        <Image src="/logo.png" style={styles.ageasLogo} width={140} height={70} alt="Ageas Logo" />
+        <Image src="/logo.png" style={styles.logo} />
       </View>
 
-      <Text style={{ textAlign: "center", marginBottom: 10, fontSize: 10 }}>
-        Please detach the certificate of insurance below and keep it in a safe place
+      <Text style={styles.note}>
+        Please detach the certificate of insurance below and keep it in a safe
+        place
       </Text>
       <View style={styles.dottedLine} />
-      <Text style={styles.certificateTitle}>CERTIFICATE OF MOTOR INSURANCE</Text>
 
-      <View style={styles.mainCertificateSection}>
+      {/* title */}
+      <Text style={styles.title}>CERTIFICATE OF MOTOR INSURANCE</Text>
 
-        <View style={styles.listItem}>
-          <Text style={styles.listItemNumber}>1.</Text>
-          <Text style={styles.listItemContent}>
-            <Text>a) Registration mark of vehicle. </Text>
-          </Text>
-          <Text style={styles.TCV}>TCV-MOT-44072540</Text>
-
-        </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
+      {/* main certificate box */}
+      <View style={styles.mainBox}>
+        {/* 1a */}
+        <View style={styles.row}>
+          <Text style={styles.number}>1.</Text>
+          <View style={styles.content}>
+            <View style={styles.twoColRow}>
+              <Text>a) Registration mark of vehicle.</Text>
+              <Text>
+                Policy Number: <Text style={styles.bold}>TCV-MOT-44072540</Text>
+              </Text>
+            </View>
             <Text style={styles.bold}>LF52BVB</Text>
+          </View>
+        </View>
+        {/* 1b */}
+        <View style={[styles.row, { marginLeft: 15 }]}>
+          <Text style={styles.content}>
+            b) Any vehicle supplied to the policyholder under an agreement
+            between Ageas Insurance Limited and a repairer, whilst the vehicle
+            shown in a) above is being repaired by that repairer as a direct
+            result of damage covered by this policy, unless cover is provided by
+            the repairer’s own insurance policy.
           </Text>
         </View>
-        <View style={[styles.listItem, styles.marginTop]}>
-          <Text style={styles.listItemNumber}></Text>
-          <Text style={styles.listItemContent}>
-            b) Any vehicle supplied to the policyholder under an agreement between Ageas Insurance Limited and a repairer,
-            whilst the vehicle shown in a) above is being repaired by that repairer as a direct result of damage covered
-            by this policy, unless cover is provided by the repairer’s own insurance policy.
-          </Text>
-        </View>
-        <View style={[styles.listItem, styles.marginTop2]}>
-          <Text style={styles.listItemNumber}>2.</Text>
-          <Text style={styles.listItemContent}>
+
+        {/* 2 */}
+        <View style={styles.row}>
+          <Text style={styles.number}>2.</Text>
+          <View style={styles.content}>
             <Text>Description of vehicle.</Text>
-
-          </Text>
-        </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
             <Text style={styles.bold}>NISSAN MICRA TEMPEST</Text>
-          </Text>
+          </View>
         </View>
-        <View style={[styles.listItem, styles.marginTop2]}>
-          <Text style={styles.listItemNumber}>3.</Text>
-          <Text style={styles.listItemContent}>
+
+        {/* 3 */}
+        <View style={styles.row}>
+          <Text style={styles.number}>3.</Text>
+          <View style={styles.content}>
             <Text>Name of policyholder.</Text>
-
-          </Text>
-        </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
             <Text style={styles.bold}>Mr Uzzal Miah</Text>
-          </Text>
+          </View>
         </View>
-        <View style={[styles.listItem, styles.marginTop2]}>
-          <Text style={styles.listItemNumber}>4.</Text>
-          <Text style={styles.listItemContent}>
-            <Text>Effective date of commencement of insurance for the purposes of the relevant law.</Text>
 
-          </Text>
-        </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
+        {/* 4 */}
+        <View style={styles.row}>
+          <Text style={styles.number}>4.</Text>
+          <View style={styles.content}>
+            <Text>
+              Effective date of commencement of insurance for the purposes of
+              the relevant law.
+            </Text>
             <Text style={styles.bold}>09 Jun 2025 15:35</Text>
-          </Text>
+          </View>
         </View>
-        <View style={[styles.listItem, styles.marginTop2]}>
-          <Text style={styles.listItemNumber}>5.</Text>
-          <Text style={styles.listItemContent}>
-            <Text>Date of expiry of insurance.</Text>
 
-          </Text>
-        </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
+        {/* 5 */}
+        <View style={styles.row}>
+          <Text style={styles.number}>5.</Text>
+          <View style={styles.content}>
+            <Text>Date of expiry of insurance.</Text>
             <Text style={styles.bold}>09 Jun 2025 16:35</Text>
-          </Text>
+          </View>
         </View>
-        <View style={[styles.listItem, styles.marginTop2]}>
-          <Text style={styles.listItemNumber}>6.</Text>
-          <Text style={styles.listItemContent}>
+
+        {/* 6 */}
+        <View style={styles.row}>
+          <Text style={styles.number}>6.</Text>
+          <View style={styles.content}>
             <Text>Persons or classes of persons entitled to drive.</Text>
             <Text>
-              Those specified below; provided that the person driving holds a licence to drive the vehicle or has held
-              and is not disqualified from holding or obtaining such a licence.
+              Those specified below; provided that the person driving holds a
+              licence to drive the vehicle or has held and is not disqualified
+              from holding or obtaining such a licence.
             </Text>
-
-          </Text>
-        </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
             <Text style={styles.bold}>Mr Uzzal Miah</Text>
-          </Text>
+          </View>
         </View>
 
-
-        <View style={[styles.listItem, styles.marginTop2]}>
-          <Text style={styles.listItemNumber}>7.</Text>
-          <Text style={styles.listItemContent}>
+        {/* 7 */}
+        <View style={styles.row}>
+          <Text style={styles.number}>7.</Text>
+          <View style={styles.content}>
             <Text>Limitations as to use subject to the exclusions below.</Text>
-            <Text style={[styles.bold, { marginTop: 5 }]}>
-
+            <Text style={styles.bold}>
+              Use for social Domestic and Pleasure purposes and use in person by
+              the Policyholder in connection with their business or profession.
             </Text>
-            <Text style={[styles.bold, { marginTop: 5 }]}>The insurance does not cover:</Text>
-            <Text style={styles.subListItem}>
-              Use for racing, pacemaking, competition, rallies trials or speedtesting.
+            <Text style={{ marginTop: 5 }}>The insurance does not cover:</Text>
+            <Text>• Use for racing, pacemaking, competition, rallies trials or speedtesting.</Text>
+            <Text>
+              • Use to secure the release of a motor vehicle, which has been
+              seized by, or on behalf of, any Government or public authority.
             </Text>
-            <Text style={styles.subListItem}>
-              Use to secure the release of a motor vehicle, which has been seized by, or on behalf of, any Government or
-              public authority.
-            </Text>
-          </Text>
+          </View>
         </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
-            <Text style={styles.bold}> Use for social Domestic and Pleasure purposes and use in person by the Policyholder in connection with
-              their business or profession.</Text>
-          </Text>
-        </View>
-
-        <View style={[styles.listItem, styles.marginTop2]}>
-
-
-          <Text style={styles.subListItem}>
-            The insurance does not cover:
-          </Text>
-
-
-        </View>
-        <View style={[styles.listItem]}>
-
-
-          <Text style={styles.subListItem}>
-            Use for racing, pacemaking, competition, rallies trials or speedtesting.
-          </Text>
-
-
-        </View>
-        <View style={[styles.listItem]}>
-
-
-          <Text style={styles.subListItem}>
-            Use to secure the release of a motor vehicle, which has been seized by, or on behalf of, any Government or
-            public authority.
-          </Text>
-
-
-        </View>
-
-
-
-
       </View>
+
+      {/* certification */}
       <View style={styles.certification}>
-        <View>
-          <Text>
-            I hereby certify that the policy to which this certificate relates satisfies the requirements of the
-            relevant law applicable in Great Britain, Northern Ireland, the Isle of Man, the Island of Guernsey, the
-            Island of Jersey and the Island of Alderney
-          </Text>
-        </View>
-        <View style={[styles.listItem, styles.subListItem]}>
-          <Text style={[styles.listItemContent, styles.LF]}>
-            <Text style={styles.bold}>TEMPCOVER LTD</Text>
-          </Text>
-        </View>
-        <View style={styles.marginTop2}>
-          <Text>
-            AUTHENTICATED as authorised agent on behalf of the Insurer
-          </Text>
+        <Text>
+          I hereby certify that the policy to which this certificate relates
+          satisfies the requirements of the relevant law applicable in Great
+          Britain, Northern Ireland, the Isle of Man, the Island of Guernsey,
+          the Island of Jersey and the Island of Alderney
+        </Text>
+
+        <View style={styles.certRow}>
+          <Text style={styles.bold}>TEMPCOVER LTD{"\n"}AUTHENTICATED as authorised agent on behalf of the Insurer</Text>
+          <View style={styles.signatureBlock}>
+            <Text>Ageas Insurance Limited</Text>
+            <Text>Authorised Insurers</Text>
+            <Image src="/signature.png" style={{ width: 100, height: 40 }} />
+            <Text>Ant Middle, CEO</Text>
+            <Text>Ageas Insurance Limited</Text>
+          </View>
         </View>
       </View>
 
-      <View style={styles.certification}>
-        <View>
-          <Text>
-            NOTE : for full details of the insurance cover reference should be made to the policy
-          </Text>
-        </View>
-        <View>
-          <Text>
-            ADVICE TO THIS PARTIES: Nothing contained in this certificate affects your as a third party to make a calm
-          </Text>
-        </View>
-        <View>
-          <Text>
-            WARNING: This certificate has been prepared using a laser printer and is not valid if altered in any way
-          </Text>
-        </View>
-
-      </View>
-      <View >
-        <Text style={styles.office}>
-          Registered office address: Ageas House, Hampshire Corporate Park, Templers Way, Eastleigh, Hampshire, SO53 3YA Registered in England and Wales No 354568
+      {/* note */}
+      <View style={styles.noteBox}>
+        <Text>
+          NOTE: For full details of the insurance cover reference should be made
+          to the policy.
+        </Text>
+        <Text>
+          ADVICE TO THIRD PARTIES: Nothing contained in this certificate affects
+          your right as a third party to make a claim.
+        </Text>
+        <Text>
+          WARNING: This certificate has been prepared using a laser printer and
+          is not valid if altered in any way.
         </Text>
       </View>
-      <Text style={styles.heading}>Claims Hotline: 03332413392</Text>
 
-
+      {/* footer */}
+      <Text style={styles.footer}>
+        Registered office address: Ageas House, Hampshire Corporate Park,
+        Templers Way, Eastleigh, Hampshire, SO53 3YA Registered in England and
+        Wales No 354568
+      </Text>
+      <Text style={styles.footer}>127598.0.S</Text>
+      <Text style={styles.hotline}>Claims Hotline: 0333 241 3392</Text>
     </Page>
   </Document>
-)
+);
 
-export default MotorInsuranceCertificate
+export default MotorInsuranceCertificate;
