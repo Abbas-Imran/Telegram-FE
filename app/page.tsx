@@ -97,7 +97,7 @@ export default function TempCoverValidation() {
     <div className="min-h-screen ">
       {/* Header */}
       <header>
-        <div className="w-full lg:block md:block hidden bg-[#F2F2F2]  pb-[2px]">
+        <div className="w-full lg:block md:block hidden bg-[#F2F2F2] topbar-box  pb-[2px]">
           <div className="max-w-4xl  mx-auto ">
             <div className="pt-[1px]  flex  justify-end mr-[16.5px] items-center  text-sm">
               <div className="flex items-center space-x-4 ">
@@ -173,7 +173,7 @@ export default function TempCoverValidation() {
           </div>
         </div>
         <div className="w-full">
-          <div className="max-w-4xl lg:px-0 md:px-0 px-4 mx-auto ">
+          <div className="max-w-4xl lg:px-0 md:px-0 px-4 mx-auto sm:px-0">
             <div className="flex  md:gap-2 gap-3 justify-between flex-col lg:flex-row md:flex-row logo-head md:py-5 py-4 ">
               
               <div className="brand-logo"></div>
@@ -201,7 +201,7 @@ export default function TempCoverValidation() {
             USER VALIDATION
           </h2>
 
-          <p className="text-[#333] word-spacing-[1rem]  text-[16px] md:leading-[20px] leading-[30px] lg:leading-[40px]">
+          <p className="text-[#333] word-spacing-[1rem]  text-[16px] md:leading-[20px] leading-[30px] lg:leading-[40px] validation-para">
             FOR SECURITY PURPOSES, BEFORE ACCESSING YOUR POLICY DOCUMENTS,
             PLEASE CONFIRM THE FOLLOWING INFORMATION.
           </p>
@@ -216,7 +216,7 @@ export default function TempCoverValidation() {
 
         <div className="flex lg:mt-0 md:mt-0 mt-6 justify-center">
           <div className="w-full max-w-[1000px]">
-            <div className="flex lg:flex-row md:flex-row flex-col  lg:gap-20 md:gap-9 gap-4">
+            <div className="flex lg:flex-row md:flex-row flex-col  lg:gap-20 md:gap-0 gap-4">
               {/* Left column - Form */}
               <div className="lg:ml-[1.4rem] space-y-[0.9rem] lg:order-1 md:order-1 order-2 lg:w-[55%] login-form-box">
                 <div className="flex flex-col  lg:flex-row lg:gap-3 md:gap-3">
@@ -277,7 +277,7 @@ export default function TempCoverValidation() {
                 </div>
 
                 <div className="flex flex-col lg:flex-row  lg:gap-3 md:gap-2 ">
-                  <div className="flex lg:w-[41%] -mt-2  lg:justify-end  ">
+                  <div className="flex lg:w-[41%] -mt-2  lg:justify-end  date-of-birth">
                     <Label
                       htmlFor="dob"
                       className={`font-bold text-[16px] ${
@@ -365,7 +365,7 @@ export default function TempCoverValidation() {
                           : selectedDateOfPolicy
                           ? "text-[#6BA125]"
                           : "text-[#234397]"
-                      } font-bold text-[16px]`}
+                      } font-bold text-[16px]` }
                     >
                       Policy start date
                     </Label>
