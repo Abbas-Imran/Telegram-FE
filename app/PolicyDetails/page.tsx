@@ -60,106 +60,108 @@ export default function PolicyDetail() {
     },
   ];
   return (
-    <div className="min-h-screen lg:px-0 md:px-0 px-4 pl-[15px]">
+    <div className="min-h-screen lg:px-0 md:px-0 px-4 pl-[15px] sm:px-0">
       {/* Header */}
 
+      
       <header>
-        <div className="w-full lg:block md:block hidden bg-[#F2F2F2]  pb-[2px]">
-          <div className="max-w-4xl  mx-auto ">
-            <div className="pt-[1px]  flex  justify-end mr-[16.5px] items-center  text-sm">
-              <div className="flex items-center space-x-4 ">
-                <div className="my-links-work flex items-center space-x-4 mr-[15px] mt-[-2px]">
-                  <Link
-                    href="#"
-                    className="text-[#234397] text-[12px] font-normal hover:underline mr-[15px]"
-                  >
-                    Who we cover - eligibility
-                  </Link>
-                  <span className="text-[#19a4e0]">|</span>
-                  <Link
-                    href="#"
-                    className="text-[#234397] text-[12px] hover:underline mr-[0px]"
-                  >
-                    Why choose Tempcover?
-                  </Link>
-                  <span className="text-[#19a4e0]">|</span>
-                  <Link
-                    href="#"
-                    className="text-[#234397] text-[12px] hover:underline"
-                  >
-                    FAQ's
-                  </Link>
-                </div>
-                <nav
-                  id="social-navigation"
-                  className="social-navigation -ml-1  hidden-sm"
-                >
-                  <a
-                    href="https://twitter.com/tempcover"
-                    className="twitter"
-                    title="Visit tempcover's Twitter feed"
-                    target="_blank"
-                  >
-                    Twitter
-                  </a>
-                  <a
-                    href="https://www.facebook.com/tempcover"
-                    className="facebook"
-                    title="Visit tempcover's Facebook page"
-                    target="_blank"
-                  >
-                    Facebook
-                  </a>
-                  <a
-                    href="https://www.youtube.com/user/tempcover"
-                    className="youtube"
-                    title="Visit tempcover's YouTube channel"
-                    target="_blank"
-                  >
-                    YouTube
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/temporary-cover-ltd?trk=tyah"
-                    className="linkedin"
-                    title="Visit tempcover's LinkedIn feed"
-                    target="_blank"
-                  >
-                    Linkedin
-                  </a>
-                  <a
-                    href="https://plus.google.com/+tempcover/posts"
-                    className="google"
-                    title="Visit tempcover's Google + page"
-                    target="_blank"
-                  >
-                    Google +
-                  </a>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full">
-          <div className="max-w-4xl lg:px-0 md:px-0 px-4 mx-auto ">
-            <div className="flex  md:gap-2 gap-3 justify-between flex-col lg:flex-row md:flex-row logo-head md:py-5 py-4 ">
-              <div className="brand-logo"></div>
-              <div className="flex  flex-col lg:mt-[2px]  text-left lg:text-center md:text-right">
-                <div>
-                  <h1 className="md:text-2xl text-2xl  font-bold text-[#234397] lg:mb-0 md:mb-0 mb-3 main-heading">
-                    SHORT TERM INSURANCE
-                  </h1>
-                </div>
-                <div className="-ml-2">
-                  <p className=" text-[#234397] -mt-[2px] text-[14px] main-page-para">
-                    We are the UK's largest temporary and short term insurance
-                    provider.
-                  </p>
+              <div className="w-full lg:block md:block hidden bg-[#F2F2F2] topbar-box  pb-[2px]">
+                <div className="max-w-4xl  mx-auto ">
+                  <div className="pt-[1px]  flex  justify-end mr-[16.5px] items-center  text-sm">
+                    <div className="flex items-center space-x-4 ">
+                      <div className="my-links-work flex items-center space-x-4 mr-[15px] mt-[-2px]">
+                        <Link
+                          href="#"
+                          className="text-[#234397] text-[12px] font-normal hover:underline mr-[15px]"
+                        >
+                          Who we cover - eligibility
+                        </Link>
+                        <span className="text-[#19a4e0]">|</span>
+                        <Link
+                          href="#"
+                          className="text-[#234397] text-[12px] hover:underline mr-[0px]"
+                        >
+                          Why choose Tempcover?
+                        </Link>
+                        <span className="text-[#19a4e0]">|</span>
+                        <Link
+                          href="#"
+                          className="text-[#234397] text-[12px] hover:underline"
+                        >
+                          FAQ's
+                        </Link>
+                      </div>
+                      <nav
+                        id="social-navigation"
+                        className="social-navigation -ml-1  hidden-sm"
+                      >
+                        <a
+                          href="https://twitter.com/tempcover"
+                          className="twitter"
+                          title="Visit tempcover's Twitter feed"
+                          target="_blank"
+                        >
+                          Twitter
+                        </a>
+                        <a
+                          href="https://www.facebook.com/tempcover"
+                          className="facebook"
+                          title="Visit tempcover's Facebook page"
+                          target="_blank"
+                        >
+                          Facebook
+                        </a>
+                        <a
+                          href="https://www.youtube.com/user/tempcover"
+                          className="youtube"
+                          title="Visit tempcover's YouTube channel"
+                          target="_blank"
+                        >
+                          YouTube
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/company/temporary-cover-ltd?trk=tyah"
+                          className="linkedin"
+                          title="Visit tempcover's LinkedIn feed"
+                          target="_blank"
+                        >
+                          Linkedin
+                        </a>
+                        <a
+                          href="https://plus.google.com/+tempcover/posts"
+                          className="google"
+                          title="Visit tempcover's Google + page"
+                          target="_blank"
+                        >
+                          Google +
+                        </a>
+                      </nav>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </header>
+              <div className="w-full">
+                <div className="max-w-4xl lg:px-0 md:px-0 px-4 mx-auto sm:px-0">
+                  <div className="flex  md:gap-2 gap-3 justify-between flex-col lg:flex-row md:flex-row logo-head md:py-5 py-4 ">
+                    
+                    <div className="brand-logo"></div>
+                    <div className="flex  flex-col lg:mt-[2px]  text-left lg:text-center md:text-right">
+                      <div>
+                        <h1 className="md:text-2xl text-2xl  font-bold text-[#234397] lg:mb-0 md:mb-0 mb-3 main-heading">
+                          SHORT TERM INSURANCE
+                        </h1>
+                      </div>
+                      <div className="-ml-2">
+                        <p className=" text-[#234397] -mt-[2px] text-[14px] main-page-para">
+                          We are the UK's largest temporary and short term insurance
+                          provider.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
       {/* Main content */}
       <div className="max-w-4xl mx-auto policy-detail-page">
           <div>
@@ -168,7 +170,8 @@ export default function PolicyDetail() {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+
             <div className="lg:order-1 md:order-1 order-2 mt-[3px] ml-[2px]">
               <div className="bg-[#19a4e0] text-white py-[10px] px-[16px] ">
                 <h4 className="text-[18px] leading-[21px]">Documents you need now</h4>

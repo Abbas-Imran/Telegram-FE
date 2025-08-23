@@ -595,6 +595,22 @@ main.max-w-\[1040px\].lg\:pl-\[14px\].md\:px-0.px-2.mx-auto.lg\:py-14.md\:py-10.
     margin-left: 13px;
     font-size: 13px;
 }
+.policy-detail-page {
+    padding: 70px 30px;
+}
+.detail-box {
+    margin-right: 0px;
+    margin-left: 42px;
+    font-size: 15px;
+    list-style: none;
+    padding-top: 2px;
+}
+p.unable-text{
+  display: none;
+}
+button.home-button {
+    margin-top: 17px;
+}
 }
 
 @media (max-width: 767px) {
@@ -657,5 +673,24 @@ p.validation-para {
 .login-form-box .submit-button {
     margin-left: -2px;
     margin-top: 40px;
+}
+.policy-detail-page {
+    padding: 26px 13px 30px;
+}
+.policy-detail-page h1 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-left: 6px;
+}
+    .detail-box {
+        margin-right: 5px;
+        margin-left: 8px;
+        font-size: 14px;
+        list-style: none;
+        padding-top: 0px;
+        margin-bottom: 16px;
+    }
+  .detail-box > div{
+    font-size: 14px;
 }
 }
