@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingTop: 5
+    paddingTop: 5,
+    position: 'relative'
   },
   addressBlock: {
     fontWeight: 'bold',
@@ -411,6 +412,9 @@ const styles = StyleSheet.create({
   {
     marginLeft: '15',
     paddingTop: '1'
+  },
+  myHeading:{
+    marginTop: "22",
   }
 })
 
@@ -866,10 +870,12 @@ const InsuranceDocument = () => (
 
       </View>
 
-      <View style={styles.lastHeading}>
-        <Text >Ageas Insurance Limited, Ageas House, Hampshire Corporate Park, Templers Way, Eastleigh, Hampshire, SO53 3YA</Text>
-
-      </View>
+      <View style={[styles.lastHeading, styles.myHeading]}>
+  <Text>
+    Ageas Insurance Limited, Ageas House, Hampshire Corporate Park, Templers Way, Eastleigh, Hampshire, SO53 3YA
+  </Text>
+</View>
+      
       <View style={styles.mainCertificateSection1}>
         <View style={styles.secondPageFirstContent}>
           <Text style={styles.bold}>
