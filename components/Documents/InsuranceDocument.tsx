@@ -163,6 +163,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "right",
     marginBottom: 10,
+    marginRight: 10,
   },
   scheduleTable: {
 
@@ -189,13 +190,13 @@ const styles = StyleSheet.create({
   },
   scheduleEmptyRow:
   {
-    height: '25',
+    height: '18',
     borderBottomWidth: 1,
     borderColor: '#000',
     paddingLeft: 5,
     paddingTop: 5,
     // padding:10,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#d3d3d3',
     width: '100%'
   },
   scheduleEmptySmallestRow:
@@ -216,13 +217,13 @@ const styles = StyleSheet.create({
   },
   scheduleEmptyRowWthCenterContent:
   {
-    height: '25',
+    height: '18',
     borderBottomWidth: 1,
     borderColor: '#000',
     paddingLeft: 5,
     paddingTop: 5,
     // padding:10,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#d3d3d3',
     width: '100%',
     textAlign: 'center'
   },
@@ -234,7 +235,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     paddingTop: 5,
     // padding:10,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#d3d3d3',
     width: '100%'
   },
   scheduleCell: {
@@ -274,7 +275,7 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
   },
   scheduleHeaderCell: {
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#d3d3d3",
     fontWeight: "bold",
   },
   scheduleCellSmall: {
@@ -409,7 +410,8 @@ const styles = StyleSheet.create({
     paddingTop: '1'
   },
   myHeading:{
-    marginTop: "22",
+    marginTop: "3",
+    marginBottom: 35
   }
 })
 
@@ -478,7 +480,7 @@ const InsuranceDocument = () => (
           </View>
           <View style={styles.scheduleRow}>
             <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Address</Text>
+              <Text style={[styles.bold, styles.marginTopAddress]}>Address</Text>
             </View>
             <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellLarge]}>
               <Text>14 Lindsey Road</Text>
