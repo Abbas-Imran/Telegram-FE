@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   scheduleCellSmall: {
-    width: '30%',
+    width: '33%',
     paddingLeft: '10',
     paddingTop: '10'
 
@@ -398,12 +398,13 @@ const styles = StyleSheet.create({
   {
     textAlign: 'center',
     marginTop: '2',
+    fontSize: '5'
 
   },
   lastHeading1:
   {
     textAlign: 'center',
-    marginTop: '250',
+    marginTop: '240',
     fontSize: '5'
 
   },
@@ -442,15 +443,15 @@ const styles = StyleSheet.create({
   heading:
   {
     fontWeight: 'bold',
-    fontSize: '14',
+    fontSize: '16',
     marginBottom: '20'
   },
   firstheading:
   {
     fontWeight: 'bold',
-    fontSize: '14',
-    marginBottom: '18',
-    marginTop: '125',
+    fontSize: 12,
+    marginBottom: 15,
+    marginTop: 110,
   },
   heading1:
   {
@@ -477,7 +478,11 @@ const styles = StyleSheet.create({
   },
   leftSpace:
   {
-    paddingLeft: '20'
+    marginLeft: 22
+  },
+  leftSpace2:
+  {
+    paddingLeft: '10'
   },
   underLine:
   {
@@ -491,20 +496,17 @@ const styles = StyleSheet.create({
   },
   importantNote:
   {
-
-    marginLeft: '10',
-    marginRight: '10',
     marginTop: '15',
     backgroundColor: 'black',
     textAlign: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: '9',
     color: 'white',
     paddingTop: '5',
     fontWeight: 'bold',
-    paddingBottom: '5'
-
+    paddingBottom: '5',
+    paddingLeft: '5',
+    paddingRight: '5',
   },
   firstpagefooter:
   {
@@ -521,8 +523,16 @@ const styles = StyleSheet.create({
   {
     marginTop: '10',    
     marginBottom: '30',    
-  }
-
+  },
+  italic: {
+    fontStyle: "italic",
+  },
+  importanttext:{
+    fontSize: 10,
+  },
+  importanttxt:{
+    fontSize: 8,
+  },
 })
 
 const StatementFactAgeas = () => (
@@ -543,7 +553,7 @@ const StatementFactAgeas = () => (
         <View style={styles.scheduleTable}>
           <View style={styles.scheduleRow}>
             <View style={[styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Your Agent</Text>
+              <Text style={[styles.bold, styles.italic]}>Your Agent</Text>
               <Text>Agent</Text>
             </View>
             <View style={[styles.scheduleCell, styles.scheduleCellLarge]}>
@@ -554,7 +564,7 @@ const StatementFactAgeas = () => (
           </View>
           <View style={[styles.marginTop, styles.scheduleRow]}>
             <View style={[styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Your Details - Name Address</Text>
+              <Text style={[styles.bold, styles.italic]}>Your Details - Name Address</Text>
               <Text style={styles.marginTop}>Surname</Text>
               <Text style={styles.marginTop}>Forename(s)</Text>
               <Text style={styles.marginTop}>Title</Text>
@@ -562,7 +572,7 @@ const StatementFactAgeas = () => (
               <Text style={styles.marginTop}>Email Address</Text>
             </View>
             <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Miah</Text>
+              <Text>Miah</Text>
               <Text style={styles.marginTop}>Uzzal</Text>
               <Text style={styles.marginTop}>Mr</Text>
               <Text style={styles.marginTop}>14 Lindsey Road, Dagenham, Greater London, RM8 2RP</Text>
@@ -573,7 +583,7 @@ const StatementFactAgeas = () => (
           </View>
           <View style={[styles.marginTop, styles.scheduleRow]}>
             <View style={[styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Policy Cover:</Text>
+              <Text style={[styles.bold, styles.italic]}>Your Policy Cover:</Text>
               <Text style={styles.marginTop}>Effective Date</Text>
               <Text style={styles.marginTop}>Expiry Date</Text>
               <Text style={styles.marginTop}>Policy Cover</Text>
@@ -582,7 +592,6 @@ const StatementFactAgeas = () => (
             </View>
             <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
               <Text></Text>
-
               <Text style={styles.bold}>15:35 09 June 2025</Text>
               <Text style={styles.marginTop}> 16:35 09 June 2025</Text>
               <Text style={styles.marginTop}> FULLY COMPREHENSIVE</Text>
@@ -593,14 +602,13 @@ const StatementFactAgeas = () => (
           </View>
 
           <View>
-            <Text style={[styles.bold, styles.leftSpace]}>Driver Details (including You)</Text>
-
+            <Text style={[styles.bold, styles.italic, styles.leftSpace2]}>Driver Details (including You)</Text>
           </View>
 
           <View style={[styles.scheduleRow]}>
 
             <View style={[styles.flexBox]}>
-              <View sty>
+              <View>
                 <Text > Full Name</Text>
                 <Text style={styles.marginTop}> Sex</Text>
                 <Text style={styles.marginTop}> Date of birth</Text>
@@ -639,7 +647,7 @@ const StatementFactAgeas = () => (
           </View>
           <View style={[styles.marginTop, styles.scheduleRow]}>
             <View style={[styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Vehicle Details:</Text>
+              <Text style={[styles.bold, styles.italic]}>Vehicle Details:</Text>
               <Text style={styles.marginTop}>Make</Text>
               <Text style={styles.marginTop}>Model</Text>
               <Text style={styles.marginTop}>Registration number</Text>
@@ -648,7 +656,7 @@ const StatementFactAgeas = () => (
             <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
               <Text></Text>
 
-              <Text style={styles.bold}> NISSAN</Text>
+              <Text> NISSAN</Text>
               <Text style={styles.marginTop}>MICRA TEMPEST</Text>
               <Text style={styles.marginTop}>LF52BVB</Text>
               <Text style={styles.marginTop}>£1,500 to £5,000</Text>
@@ -658,7 +666,7 @@ const StatementFactAgeas = () => (
 
 
           <View style={styles.marginTop1}>
-            <Text style={[styles.bold, styles.leftSpace]}>Accident / Claim Details</Text>
+            <Text style={[styles.bold, styles.leftSpace2, styles.italic]}>Accident / Claim Details</Text>
 
           </View>
 
@@ -736,7 +744,7 @@ const StatementFactAgeas = () => (
 
           </View>
           <View style={styles.importantNote}>
-            <Text>
+            <Text style={styles.importanttxt}>
               IMPORTANT - You also must read the Ageas Insurance Proposer Declaration & important Notes on Pages 2 & 3
             </Text>
           </View>
@@ -766,7 +774,7 @@ const StatementFactAgeas = () => (
           <Text >
             Ageas /  PROPOSER DECLARATION</Text>
         </View>
-        <View>
+        <View style={styles.leftSpace}>
           <View>
             <Text style={styles.bold}>
               1)   I declare that I,or any named driver covered:
@@ -805,7 +813,7 @@ const StatementFactAgeas = () => (
           </View>
         </View>
 
-        <View style={styles.marginTop1}>
+        <View style={[styles.marginTop1, styles.leftSpace]}>
           <View>
             <Text style={styles.bold}>
               2)  I declare that the vehicle:
@@ -844,26 +852,26 @@ const StatementFactAgeas = () => (
             </Text>
           </View>
         </View>
-        <View style={styles.marginTop1}>
+        <View style={[styles.marginTop1, styles.leftSpace]}>
           <Text style={styles.bold}>
             3)   I am aware that temporary insurance cannot be used for Hire or Loan Vehicles (i.e. Vehicle Rentals,
             Vehicle Salvage/Recovery Agents, Credit Hire Vehicles/Companies and Accident Management
             Companies).
           </Text>
         </View>
-        <View style={styles.marginTop}>
+        <View style={[styles.marginTop1, styles.leftSpace]}>
           <Text style={styles.bold}>
             4)   I declare that any certificate of motor insurance and other documents issued will not be used as
             evidence of insurance for the recovery of impounded vehicles.
           </Text>
         </View>
-        <View style={styles.marginTop}>
+        <View style={[styles.marginTop1, styles.leftSpace]}>
           <Text style={styles.bold}>
             5)   I am aware that foreign use is not permitted for any demonstrator vehicle or courtesy car.
           </Text>
         </View>
 
-        <View style={styles.marginTop}>
+        <View style={[styles.marginTop1, styles.leftSpace]}>
           <Text style={styles.bold}>
             6)  I am aware that this policy has a total excess in respect of Accidental Damage, Malicious Damage, Fire
             and Theft claims of £500.00.
@@ -1003,12 +1011,11 @@ const StatementFactAgeas = () => (
             </Text>
           </View>
           <View style={styles.importantNote}>
-            <Text>
+            <Text style={styles.importanttext}>
               IMPORTANT
             </Text>
-            <Text>
+            <Text style={styles.importanttext}>
               There is no need to sign this document, as by agreeing to the declaration during the quotation process you have confirmed that you have read and agree to the Ageas / Proposer's Declaration
-
             </Text>
           </View>
           {/* <View style={styles.lastHeading1}>
