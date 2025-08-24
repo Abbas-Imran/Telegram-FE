@@ -73,6 +73,7 @@ function formatDate(date: Date) {
 
   return `${day}/${month}/${year}`;
 }
+
   const handleLogin = () => {
     console.log(selectedDateOfPolicy);
     const params = new URLSearchParams(window.location.search);
