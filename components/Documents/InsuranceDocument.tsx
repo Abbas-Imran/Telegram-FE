@@ -411,7 +411,7 @@ const styles = StyleSheet.create({
   },
   myHeading:{
     marginTop: "3",
-    marginBottom: 35
+    marginBottom: 34
   }
 })
 
@@ -431,24 +431,23 @@ const InsuranceDocument = () => (
               <Text style={styles.scheduleTitle}>Schedule</Text>
             </View>
             <View style={styles.schedule}>
-              <Text style={styles.insuranceadvisor}>Insurance Advisor: Tempcover Ltd</Text>
+              <Text style={styles.insuranceadvisor}>Insurance Advisor: &nbsp;&nbsp;Tempcover Ltd</Text>
 
             </View>
             <View style={styles.schedule}>
-              <Text >2nd Floor Admiral House, Harlington Way</Text>
+              <Text >&nbsp;&nbsp;2nd Floor Admiral House, Harlington Way</Text>
+            </View>
+            <View style={styles.schedule}>
+              <Text style={styles.addressissuing}>Address of Issuing Office: &nbsp;&nbsp;Way</Text>
+
+            </View>
+
+            <View style={styles.schedule}>
+              <Text style={styles.addressissuing1}>&nbsp;&nbsp;Fleet, Hampshire</Text>
 
             </View>
             <View style={styles.schedule}>
-              <Text style={styles.addressissuing}>Address of Issuing Office: Way</Text>
-
-            </View>
-
-            <View style={styles.schedule}>
-              <Text style={styles.addressissuing1}>Fleet, Hampshire</Text>
-
-            </View>
-            <View style={styles.schedule}>
-              <Text style={styles.addressissuing2}>GU51 4BB</Text>
+              <Text style={styles.addressissuing2}>&nbsp;&nbsp;GU51 4BB</Text>
 
             </View>
           </View>
