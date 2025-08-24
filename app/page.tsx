@@ -66,13 +66,13 @@ export default function TempCoverValidation() {
 
   const isSurnameError = isSurnameTouched && surname === "";
 
-  function formatDate(date: Date) {
-    const day = date.getDate(); // 1 - 31
-    const month = date.getMonth() + 1; // 0-indexed, so add 1
-    const year = date.getFullYear();
+function formatDate(date: Date) {
+  const day = String(date.getDate()).padStart(2, "0");   // 01 - 31
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // 01 - 12
+  const year = date.getFullYear();
 
-    return `${day}/${month}/${year}`;
-  }
+  return `${day}/${month}/${year}`;
+}
   const handleLogin = () => {
     console.log(selectedDateOfPolicy);
     const params = new URLSearchParams(window.location.search);
