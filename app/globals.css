@@ -441,7 +441,7 @@ a.text-\[\#234397\].text-\[12px\].hover\:underline.mr-\[0px\] {
   margin-left: 6px;
 }
 .policy-detail-page {
-  padding-top: 65px;
+  padding: 65px 0 40px;
 }
 
 .policy-detail-page h1 {
@@ -458,6 +458,12 @@ p.policy-para {
   line-height: normal;
   margin-top: 3px;
   display: block;
+}
+.policy-items li a {
+    line-height: normal;
+    margin-top: 3px;
+    display: block;
+    font-size: 16px;
 }
 ul.policy-items img {
   height: 24px !important;
